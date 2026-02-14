@@ -1,0 +1,195 @@
+
+html {
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+header {
+    background: linear-gradient(45deg, #2c3e50, #34495e);
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    position: relative;
+    transition: 0.3s;
+}
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    left: 0;
+    bottom: -5px;
+    background-color: #f39c12;
+    transition: 0.3s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+.hero {
+    text-align: center;
+    padding: 60px;
+    background: linear-gradient(to right, #e6f2ff, #ffffff);
+}
+
+.hero button {
+    padding: 12px 25px;
+    background-color: #e67e22;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.hero button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+.categories {
+    text-align: center;
+    padding: 40px;
+}
+
+.category-box {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.box {
+    background-color: white;
+    padding: 20px;
+    width: 150px;
+    box-shadow: 0 0 8px gray;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+}
+.books {
+    text-align: center;
+    padding: 40px;
+}
+
+.book-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.book-card {
+    background: white;
+    padding: 15px;
+    width: 220px;
+    box-shadow: 0 0 10px gray;
+    border-radius: 8px;
+    transition: 0.4s;
+}
+
+.book-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+}
+
+.book-card img {
+    width: 100%;
+    border-radius: 5px;
+    transition: 0.4s;
+}
+
+.book-card:hover img {
+    transform: scale(1.05);
+}
+
+.book-card button {
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.book-card button:hover {
+    transform: scale(1.05);
+    background-color: #1e8449;
+}
+.buy-form, .contact {
+    text-align: center;
+    padding: 40px;
+}
+
+.buy-form form,
+.contact form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: auto;
+    gap: 10px;
+}
+
+input, textarea, select {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border: 2px solid #3498db;
+    box-shadow: 0 0 5px #3498db;
+}
+
+button {
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+footer {
+    background: linear-gradient(45deg, #2c3e50, #34495e);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+@media (max-width: 768px) {
+    .category-box,
+    .book-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
